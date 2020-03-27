@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>PointUI</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --button-height: 32px;
+      --font-size: 14px;
+      --botton-bg: #fff;
+      --button-active-bg: #eee;
+      --border-radius: 4px;
+      --color: #333;
+      --border-color: #999;
+      --border-color-hover: #666;
+    }
+
+    #app {
+      margin: 20px;
+    }
+
+    body {
+      font-size: var(--font-size);
+    }
+  </style>
+
+  <style>
+  </style>
+</head>
+<body>
+<div id="app">
+  <g-button icon="setting" icon-position="right" :loading="loadingState1" @click="loadingState1=!loadingState1">
+    按钮
+  </g-button>
+  <g-button :loading="loadingState2" @click="loadingState2=!loadingState2">
+    按钮
+  </g-button>
+  <g-button icon="setting" :loading="loadingState3" @click="loadingState3=!loadingState3" >
+    按钮
+  </g-button>
+  <g-button-group>
+    <g-button  icon="left" :loading="loadingState2" @click="loadingState2=!loadingState2">
+      按钮
+    </g-button>
+    <g-button icon="right" icon-position="right" :loading="loadingState3" @click="loadingState3=!loadingState3" >
+      按钮
+    </g-button>
+  </g-button-group>
+  <div id="test"></div>
+</div>
+<script src="src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1715614_dcprijfsj07.js"></script>
+</body>
+</html>
