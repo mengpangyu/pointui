@@ -13,6 +13,7 @@
   import Icon from "./Icon"
 
   export default {
+    name: 'PointButton',
     components: {
       'g-icon': Icon
     },
@@ -32,7 +33,7 @@
     }
   }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
   @keyframes loadingCircle {
     0% {
       transform: rotate(0);

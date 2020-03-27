@@ -31,30 +31,41 @@
   </style>
 
   <style>
+    .box{
+      margin: 20px;
+    }
   </style>
 </head>
 <body>
 <div id="app">
-  <g-button icon="setting" icon-position="right" :loading="loadingState1" @click="loadingState1=!loadingState1">
-    按钮
-  </g-button>
-  <g-button :loading="loadingState2" @click="loadingState2=!loadingState2">
-    按钮
-  </g-button>
-  <g-button icon="setting" :loading="loadingState3" @click="loadingState3=!loadingState3" >
-    按钮
-  </g-button>
-  <g-button-group>
-    <g-button  icon="left" :loading="loadingState2" @click="loadingState2=!loadingState2">
+  <div class="box">
+    <p-input value="真带" disabled></p-input>
+    <p-input value="真带" read-only></p-input>
+    <p-input value="直男"></p-input>
+  </div>
+  <div class="box">
+    <p-input value="dd" error="字不少2"></p-input>
+  </div>
+  <div class="box">
+    <p-button icon="setting" icon-position="right" :loading="loadingState1" @click="loadingState1=!loadingState1">
       按钮
-    </g-button>
-    <g-button icon="right" icon-position="right" :loading="loadingState3" @click="loadingState3=!loadingState3" >
+    </p-button>
+    <p-button :loading="loadingState2" @click="loadingState2=!loadingState2">
       按钮
-    </g-button>
-  </g-button-group>
-  <div id="test"></div>
+    </p-button>
+    <p-button icon="setting" :loading="loadingState3" @click="loadingState3=!loadingState3" >
+      按钮
+    </p-button>
+    <p-button-group>
+      <p-button  icon="left" :loading="loadingState2" @click="loadingState2=!loadingState2">
+        按钮
+      </p-button>
+      <p-button icon="right" icon-position="right" :loading="loadingState3" @click="loadingState3=!loadingState3" >
+        按钮
+      </p-button>
+    </p-button-group>
+  </div>
 </div>
 <script src="src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1715614_dcprijfsj07.js"></script>
 </body>
 </html>
