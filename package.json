@@ -1,6 +1,6 @@
 {
   "name": "pointui",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "this is a UI storeroom",
   "main": "dist/index.js",
   "scripts": {
