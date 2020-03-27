@@ -13,7 +13,8 @@ new Vue({
   data: {
     loadingState1: false,
     loadingState2: false,
-    loadingState3: false
+    loadingState3: false,
+    message: '1'
   }
 })
 
