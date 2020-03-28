@@ -13,7 +13,6 @@
       align:{
         type: String,
         validator(value){
-          console.log(value)
           return ['left','right','center'].includes(value)
         }
       }

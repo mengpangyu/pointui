@@ -36,7 +36,6 @@ new Vue({
 //   })
 //   button.$mount()
 //   let useElement = button.$el.querySelector('use')
-//   console.log(button.$el)
 //   expect(useElement.getAttribute('xlink:href')).to.eq('#icon-setting')
 //   button.$el.remove()
 //   button.$destroy()
