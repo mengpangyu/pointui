@@ -25,7 +25,6 @@
      },
       rowClass(){
         let {align} = this
-        console.log(align)
         return [align && `align-${align}`]
       }
     },
@@ -39,6 +38,7 @@
 <style lang="scss" scoped>
   .row{
     display: flex;
+    flex-wrap: wrap;
     &.align-right{
       justify-content: flex-end;
     }

@@ -38,70 +38,56 @@
 </head>
 <body>
 <div id="app">
-    <div style="border: 1px solid black;">
-      <p-row gutter="20">
-        <p-col span="2">1</p-col>
-        <p-col span="22">2</p-col>
-      </p-row>
-      <p-row>
-        <p-col span="2">1</p-col>
-        <p-col span="22">2</p-col>
-      </p-row>
-      <p-row>
-        <p-col span="2">1</p-col>
-        <p-col offset="2" span="20">2</p-col>
-      </p-row>
-      <p-row>
-        <p-col span="18">1</p-col>
-        <p-col offset="2" span="4">2</p-col>
-      </p-row>
-      <p-row gutter="20">
-        <p-col>1</p-col>
-        <p-col>2</p-col>
-      </p-row>
-      <p-row gutter="20">
-        <p-col>1</p-col>
-        <p-col>2</p-col>
-        <p-col>3</p-col>
-      </p-row>
-      <p-row gutter="20">
-        <p-col>1</p-col>
-        <p-col>2</p-col>
-        <p-col>3</p-col>
-        <p-col>4</p-col>
-      </p-row>
-    </div>
-    <div class="box">
-      <p-input value="真带" disabled></p-input>
-      <p-input value="真带" readonly></p-input>
-      <p-input value="直男"></p-input>
-    </div>
-    <div class="box">
-      <p-input v-model="message"></p-input>
-      <h1>{{message}}</h1>
-    </div>
-    <div class="box">
-      <p-input value="dd" error="字不少2"></p-input>
-    </div>
-    <div class="box">
-      <p-button icon="setting" icon-position="right" :loading="loadingState1" @click="loadingState1=!loadingState1">
+  <div style="border: 1px solid black;">
+    <p-row>
+      <p-col style="border: 1px solid red" span="20"
+             :phone="{span:24}"
+             :ipad="{span:14}"
+             :narrow-pc="{span:16}"
+             :pc="{span:18}"
+             :wide-pc="{span:20}"
+      >1</p-col>
+      <p-col  style="border: 1px solid red" span="2"
+             :phone="{span:24}"
+             :ipad="{span:10}"
+             :narrow-pc="{span:8}"
+             :pc="{span:6}"
+             :wide-pc="{span:4}"
+      >2</p-col>
+
+    </p-row>
+  </div>
+  <div class="box">
+    <p-input value="真带" disabled></p-input>
+    <p-input value="真带" readonly></p-input>
+    <p-input value="直男"></p-input>
+  </div>
+  <div class="box">
+    <p-input v-model="message"></p-input>
+    <h1>{{message}}</h1>
+  </div>
+  <div class="box">
+    <p-input value="dd" error="字不少2"></p-input>
+  </div>
+  <div class="box">
+    <p-button icon="setting" icon-position="right" :loading="loadingState1" @click="loadingState1=!loadingState1">
+      按钮
+    </p-button>
+    <p-button :loading="loadingState2" @click="loadingState2=!loadingState2">
+      按钮
+    </p-button>
+    <p-button icon="setting" :loading="loadingState3" @click="loadingState3=!loadingState3">
+      按钮
+    </p-button>
+    <p-button-group>
+      <p-button icon="left" :loading="loadingState2" @click="loadingState2=!loadingState2">
         按钮
       </p-button>
-      <p-button :loading="loadingState2" @click="loadingState2=!loadingState2">
+      <p-button icon="right" icon-position="right" :loading="loadingState3" @click="loadingState3=!loadingState3">
         按钮
       </p-button>
-      <p-button icon="setting" :loading="loadingState3" @click="loadingState3=!loadingState3">
-        按钮
-      </p-button>
-      <p-button-group>
-        <p-button icon="left" :loading="loadingState2" @click="loadingState2=!loadingState2">
-          按钮
-        </p-button>
-        <p-button icon="right" icon-position="right" :loading="loadingState3" @click="loadingState3=!loadingState3">
-          按钮
-        </p-button>
-      </p-button-group>
-    </div>
+    </p-button-group>
+  </div>
 </div>
 <script src="src/app.js"></script>
 </body>
