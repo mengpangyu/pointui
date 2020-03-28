@@ -56,7 +56,7 @@
       <updated>1585291130589</updated>
       <workItem from="1585291132462" duration="223000" />
       <workItem from="1585294946374" duration="14926000" />
-      <workItem from="1585361075663" duration="635000" />
+      <workItem from="1585361075663" duration="22289000" />
     </task>
     <task id="LOCAL-00001" summary="提交运行集成">
       <created>1585296710610</created>
@@ -100,7 +100,70 @@
       <option name="project" value="LOCAL" />
       <updated>1585310413756</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="row 和 col 雏形完成">
+      <created>1585365485786</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1585365485786</updated>
+    </task>
+    <task id="LOCAL-00008" summary="基本实现栅格系统">
+      <created>1585372549293</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1585372549293</updated>
+    </task>
+    <task id="LOCAL-00009" summary="重构 row 和 col">
+      <created>1585373474872</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585373474872</updated>
+    </task>
+    <task id="LOCAL-00010" summary="添加 row 的 align 对齐的样式">
+      <created>1585375954586</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1585375954586</updated>
+    </task>
+    <task id="LOCAL-00011" summary="初步完成 响应式布局">
+      <created>1585380612122</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1585380612122</updated>
+    </task>
+    <task id="LOCAL-00012" summary="默认 phone 样式">
+      <created>1585380847480</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1585380847481</updated>
+    </task>
+    <task id="LOCAL-00013" summary="优化响应式">
+      <created>1585382102723</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1585382102723</updated>
+    </task>
+    <task id="LOCAL-00014" summary="稍微重构了一下代码">
+      <created>1585383158021</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1585383158021</updated>
+    </task>
+    <task id="LOCAL-00015" summary="完成 col 的测试">
+      <created>1585388251829</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1585388251829</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,13 +176,22 @@
     <MESSAGE value="添加了 input 的 错误 不可选取 只读 状态" />
     <MESSAGE value="添加input的测试用例" />
     <MESSAGE value="实现 v-model 的双向绑定" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现 v-model 的双向绑定" />
+    <MESSAGE value="row 和 col 雏形完成" />
+    <MESSAGE value="基本实现栅格系统" />
+    <MESSAGE value="重构 row 和 col" />
+    <MESSAGE value="添加 row 的 align 对齐的样式" />
+    <MESSAGE value="初步完成 响应式布局" />
+    <MESSAGE value="默认 phone 样式" />
+    <MESSAGE value="优化响应式" />
+    <MESSAGE value="稍微重构了一下代码" />
+    <MESSAGE value="完成 col 的测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成 col 的测试" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="164" y="0" key="CommitChangelistDialog2" timestamp="1585310412929">
+    <state x="164" y="0" key="CommitChangelistDialog2" timestamp="1585388901473">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="164" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585310412929" />
+    <state x="164" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1585388901473" />
     <state x="371" y="35" key="FileChooserDialogImpl" timestamp="1585291354125">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -128,13 +200,17 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="441" y="0" key="RollbackChangesDialog/0.0.1280.680@0.0.1280.680" timestamp="1585298572987" />
-    <state x="25" y="0" key="SettingsEditor" timestamp="1585303128726">
+    <state x="25" y="0" key="SettingsEditor" timestamp="1585382001965">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="25" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1585303128726" />
-    <state x="439" y="0" width="840" height="678" key="search.everywhere.popup" timestamp="1585310238736">
+    <state x="25" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1585382001965" />
+    <state x="248" y="22" width="784" height="636" key="find.popup" timestamp="1585387810227">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="439" y="0" width="840" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1585310238736" />
+    <state x="248" y="22" width="784" height="636" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1585387810227" />
+    <state x="439" y="0" width="840" height="678" key="search.everywhere.popup" timestamp="1585374486871">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="439" y="0" width="840" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1585374486871" />
   </component>
 </project>
