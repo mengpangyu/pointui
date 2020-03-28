@@ -22,58 +22,37 @@
     }
 
     #app {
-      margin: 20px;
     }
 
     body {
       font-size: var(--font-size);
     }
   </style>
-
   <style>
-    .box {
-      margin: 20px;
+    .header{
+      background: #333333;
     }
+    .footer{
+      background: #aaa;
+    }
+    .sider{
+      width: 200px;
+      background: #ff1100;
+    }
+
   </style>
 </head>
 <body>
 <div id="app">
-  <div style="border: 1px solid black;">
-    <p-row>
-      <p-col style="border: 1px solid red; height: 100px;" span="23" offset="1"  :pc="{span:8,offset:16}"></p-col>
-    </p-row>
-  </div>
-  <div class="box">
-    <p-input value="真带" disabled></p-input>
-    <p-input value="真带" readonly></p-input>
-    <p-input value="直男"></p-input>
-  </div>
-  <div class="box">
-    <p-input v-model="message"></p-input>
-    <h1>{{message}}</h1>
-  </div>
-  <div class="box">
-    <p-input value="dd" error="字不少2"></p-input>
-  </div>
-  <div class="box">
-    <p-button icon="setting" icon-position="right" :loading="loadingState1" @click="loadingState1=!loadingState1">
-      按钮
-    </p-button>
-    <p-button :loading="loadingState2" @click="loadingState2=!loadingState2">
-      按钮
-    </p-button>
-    <p-button icon="setting" :loading="loadingState3" @click="loadingState3=!loadingState3">
-      按钮
-    </p-button>
-    <p-button-group>
-      <p-button icon="left" :loading="loadingState2" @click="loadingState2=!loadingState2">
-        按钮
-      </p-button>
-      <p-button icon="right" icon-position="right" :loading="loadingState3" @click="loadingState3=!loadingState3">
-        按钮
-      </p-button>
-    </p-button-group>
-  </div>
+<p-layout style="height:100vh">
+  <p-sider>sider</p-sider>
+  <p-layout>
+  <p-header class="demo">header</p-header>
+    <p-content class="demo">content</p-content>
+  <p-footer class="demo">footer</p-footer>
+</p-layout>
+
+</p-layout>
 </div>
 <script src="src/app.js"></script>
 </body>
