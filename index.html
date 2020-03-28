@@ -31,39 +31,53 @@
   </style>
 
   <style>
-    .box{
+    .box {
       margin: 20px;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <p-row>
-    <p-col span="2">1</p-col>
-    <p-col span="22">2</p-col>
-  </p-row>
-  <p-row>
-    <p-col>1</p-col>
-    <p-col>2</p-col>
-  </p-row>
-  <p-row>
-    <p-col>1</p-col>
-    <p-col>2</p-col>
-    <p-col>3</p-col>
-  </p-row>
-  <p-row>
-    <p-col>1</p-col>
-    <p-col>2</p-col>
-    <p-col>3</p-col>
-    <p-col>4</p-col>
-  </p-row>
+  <div style="border: 1px solid black;">
+    <p-row gutter="20">
+      <p-col span="2">1</p-col>
+      <p-col span="22">2</p-col>
+    </p-row>
+    <p-row>
+      <p-col span="2">1</p-col>
+      <p-col span="22">2</p-col>
+    </p-row>
+    <p-row>
+      <p-col span="2">1</p-col>
+      <p-col offset="2" span="20">2</p-col>
+    </p-row>
+    <p-row>
+      <p-col span="18">1</p-col>
+      <p-col offset="2" span="4">2</p-col>
+    </p-row>
+    <p-row gutter="20">
+      <p-col>1</p-col>
+      <p-col>2</p-col>
+    </p-row>
+    <p-row gutter="20">
+      <p-col>1</p-col>
+      <p-col>2</p-col>
+      <p-col>3</p-col>
+    </p-row>
+    <p-row gutter="20">
+      <p-col>1</p-col>
+      <p-col>2</p-col>
+      <p-col>3</p-col>
+      <p-col>4</p-col>
+    </p-row>
+  </div>
   <div class="box">
     <p-input value="真带" disabled></p-input>
     <p-input value="真带" readonly></p-input>
     <p-input value="直男"></p-input>
   </div>
   <div class="box">
-   <p-input v-model="message"></p-input>
+    <p-input v-model="message"></p-input>
     <h1>{{message}}</h1>
   </div>
   <div class="box">
@@ -76,14 +90,14 @@
     <p-button :loading="loadingState2" @click="loadingState2=!loadingState2">
       按钮
     </p-button>
-    <p-button icon="setting" :loading="loadingState3" @click="loadingState3=!loadingState3" >
+    <p-button icon="setting" :loading="loadingState3" @click="loadingState3=!loadingState3">
       按钮
     </p-button>
     <p-button-group>
-      <p-button  icon="left" :loading="loadingState2" @click="loadingState2=!loadingState2">
+      <p-button icon="left" :loading="loadingState2" @click="loadingState2=!loadingState2">
         按钮
       </p-button>
-      <p-button icon="right" icon-position="right" :loading="loadingState3" @click="loadingState3=!loadingState3" >
+      <p-button icon="right" icon-position="right" :loading="loadingState3" @click="loadingState3=!loadingState3">
         按钮
       </p-button>
     </p-button-group>
