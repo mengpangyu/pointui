@@ -32,7 +32,9 @@ new Vue({
   },
   methods:{
     showToast(){
-      this.$toast('我是message')
+      this.$toast('wefff',{
+        // enableHtml: true
+      })
     }
   }
 })
