@@ -55,9 +55,9 @@
     },
     methods: {
       updateStyles() {
-        setTimeout(()=>{
+        this.$nextTick(()=>{
           this.$refs.line.style.height = `${this.$refs.wrapper.getBoundingClientRect().height}px`
-        },1000)
+        })
       },
       execAutoClose() {
         if (this.autoClose) {
