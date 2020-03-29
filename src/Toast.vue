@@ -17,12 +17,11 @@
     name: 'PointToast',
     props: {
       autoClose: {
-        type: Boolean,
-        default: false
-      },
-      autoCloseDelay: {
-        type: Number,
-        default: 1
+        type: [Boolean,Number],
+        default: 2,
+        validator(value){
+          return value === false || typeof value === 'number';
+        }
       },
       closeButton: {
         type: Object,
@@ -56,24 +55,24 @@
     },
     methods: {
       updateStyles() {
-        this.$nextTick(() => {
+        setTimeout(()=>{
           this.$refs.line.style.height = `${this.$refs.wrapper.getBoundingClientRect().height}px`
-        })
+        },1000)
       },
       execAutoClose() {
         if (this.autoClose) {
           setTimeout(() => {
-            this.close()
-          }, this.autoCloseDelay * 1000)
+            this.closeMe()
+          }, this.autoClose * 1000)
         }
       },
-      close() {
+      closeMe() {
         this.$el.remove()
         this.$emit('close')
         this.$destroy()
       },
       clickClose() {
-        this.close()
+        this.closeMe()
         if (this.closeButton && typeof this.closeButton.callback === 'function') {
           this.closeButton.callback()
         }
