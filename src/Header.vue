@@ -3,8 +3,12 @@
     <slot></slot>
   </div>
 </template>
-<script></script>
-<style>
+<script>
+  export  default {
+    name: 'PointHeader'
+  }
+</script>
+<style lang="scss"scoped>
   .header{
   }
 </style>

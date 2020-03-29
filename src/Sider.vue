@@ -8,7 +8,7 @@
     name: 'PointSider'
   }
 </script>
-<style>
+<style lang="scss" scoped>
   .sider{
   }
 </style>

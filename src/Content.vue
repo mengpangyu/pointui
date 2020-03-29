@@ -3,8 +3,12 @@
     <slot></slot>
   </div>
 </template>
-<script></script>
-<style>
+<script>
+  export  default {
+    name: 'PointContent'
+  }
+</script>
+<style  lang="scss"scoped>
   .content{
     flex-grow: 1;
   }

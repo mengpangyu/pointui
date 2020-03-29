@@ -3,8 +3,12 @@
     <slot></slot>
   </div>
 </template>
-<script></script>
-<style>
+<script>
+  export  default {
+    name: 'PointFooter'
+  }
+</script>
+<style lang="scss"scoped>
   .footer{
   }
 </style>

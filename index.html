@@ -31,9 +31,11 @@
   <style>
     .header{
       background: #333333;
+      height: 100px;
     }
     .footer{
       background: #aaa;
+      height: 100px;
     }
     .sider{
       width: 200px;
@@ -44,15 +46,7 @@
 </head>
 <body>
 <div id="app">
-<p-layout style="height:100vh">
-  <p-sider>sider</p-sider>
-  <p-layout>
-  <p-header class="demo">header</p-header>
-    <p-content class="demo">content</p-content>
-  <p-footer class="demo">footer</p-footer>
-</p-layout>
-
-</p-layout>
+  <button @click="showToast">click</button>
 </div>
 <script src="src/app.js"></script>
 </body>
