@@ -12,6 +12,11 @@ import Layout from "./Layout"
 import Sider from "./Sider"
 import Toast from "./Toast"
 import Plugin from "./plugin"
+import Tabs from "./Tabs"
+import TabsHead from "./Tabs-head"
+import TabsBody from "./Tabs-body"
+import TabsItem from "./Tabs-item"
+import TabsPane from "./Tabs-pane"
 
 Vue.component('p-button', Button)
 Vue.component('p-icon', Icon)
@@ -25,6 +30,11 @@ Vue.component('p-content', Content)
 Vue.component('p-footer', Footer)
 Vue.component('p-sider', Sider)
 Vue.component('p-toast', Toast)
+Vue.component('p-tabs', Tabs)
+Vue.component('p-tabs-head', TabsHead)
+Vue.component('p-tabs-body', TabsBody)
+Vue.component('p-tabs-pone', TabsPane)
+Vue.component('p-tabs-item', TabsItem)
 Vue.use(Plugin)
 new Vue({
   el: '#app',

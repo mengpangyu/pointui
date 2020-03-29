@@ -26,7 +26,7 @@ describe('Toast', () => {
         done()
       })
     })
-    it('接受 closeButton', () => {
+    it('接受 closeButton', (done) => {
       const callback = sinon.fake()
       const Constructor = Vue.extend(Toast)
       const vm = new Constructor({
@@ -42,6 +42,7 @@ describe('Toast', () => {
       setTimeout(()=>{
         closeButton.click()
         expect(callback).to.have.been.called
+        done()
       },200)
     })
     it('接受 enableHtml', () => {

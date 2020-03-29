@@ -46,7 +46,33 @@
 </head>
 <body>
 <div id="app">
-  <button @click="showToast">click</button>
+  <p-tabs :selected.sync="selectedTab">
+    <p-tabs-head>
+      <template slot="actions">
+        <button>设置</button>
+      </template>
+      <p-tabs-item name="woman">
+      <p-icon name="setting"></p-icon>  美女
+      </p-tabs-item>
+      <p-tabs-item name="finance" disabled>
+       财经
+      </p-tabs-item>
+      <p-tabs-item name="sports">
+       体育
+      </p-tabs-item>
+    </p-tabs-head>
+    <p-tabs-body>
+      <p-tabs-pone name="woman">
+       美女咨询
+      </p-tabs-pone>
+      <p-tabs-pone name="finance">
+       财经相关
+      </p-tabs-pone>
+      <p-tabs-pone name="sports">
+       体育相关
+      </p-tabs-pone>
+    </p-tabs-body>
+  </p-tabs>
 </div>
 <script src="src/app.js"></script>
 </body>
