@@ -33,7 +33,8 @@ new Vue({
   methods:{
     showToast(){
       this.$toast('wefff',{
-        // enableHtml: true
+        enableHtml: true,
+        position: 'top'
       })
     }
   }
