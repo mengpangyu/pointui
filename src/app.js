@@ -34,7 +34,7 @@ new Vue({
     showToast(){
       this.$toast('wefff',{
         enableHtml: true,
-        position: 'top'
+        position: 'middle'
       })
     }
   }

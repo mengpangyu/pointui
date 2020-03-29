@@ -8,7 +8,7 @@
     name: 'PointContent'
   }
 </script>
-<style  lang="scss"scoped>
+<style  lang="scss" scoped>
   .content{
     flex-grow: 1;
   }
