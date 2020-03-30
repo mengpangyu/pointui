@@ -32,8 +32,10 @@
       }
     },
     mounted() {
+      if (this.$children.length === 0) {
+        console && console.warn && console.warn('tabs 的子组件必须是 tabs-head 和 tabs-body')
+      }
       this.$children.forEach(vm=>{
-        console.log(vm.$options.name)
         if(vm.$options.name === 'PointTabsHead'){
           vm.$children.forEach(childVm=>{
             if(childVm.$options.name === 'PointTabsItem' && childVm.name === this.selected){
