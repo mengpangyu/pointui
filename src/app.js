@@ -38,6 +38,11 @@ Vue.component('p-tabs-item', TabsItem)
 Vue.use(Plugin)
 new Vue({
   el: '#app',
+  data(){
+    return {
+      selectedTab: 'sports'
+    }
+  },
   created(){
   },
   methods:{
