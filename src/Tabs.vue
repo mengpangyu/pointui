@@ -32,8 +32,7 @@
       }
     },
     created() {
-      console.log('tab')
-      console.log(this.eventBus)
+      console.log(this.selected)
     }
   }
 </script>

@@ -18,7 +18,7 @@
         default: false
       },
       name: {
-        type: String | Number,
+        type: [String,Number],
         required: true
       }
     },
@@ -43,7 +43,9 @@
 </script>
 <style lang="scss" scoped>
   .tabs-item {
+    display: flex;
     padding: 0 1em;
+    align-items: center;
     &.active{
       background: #ff1100;
     }

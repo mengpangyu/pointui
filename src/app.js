@@ -43,14 +43,9 @@ new Vue({
       selectedTab: 'sports'
     }
   },
-  created(){
-  },
   methods:{
-    showToast(){
-      this.$toast('wefff',{
-        enableHtml: true,
-        position: 'middle'
-      })
+    yyy(data){
+      console.log(data)
     }
   }
 })
