@@ -31,9 +31,18 @@
         eventBus: this.eventBus
       }
     },
-    created() {
-      console.log(this.selected)
-    }
+    mounted() {
+      this.$children.forEach(vm=>{
+        console.log(vm.$options.name)
+        if(vm.$options.name === 'PointTabsHead'){
+          vm.$children.forEach(childVm=>{
+            if(childVm.$options.name === 'PointTabsItem' && childVm.name === this.selected){
+              this.eventBus.$emit('update:selected',this.selected,childVm)
+            }
+          })
+        }
+      })
+    },
   }
 </script>
 <style lang="scss" scoped>

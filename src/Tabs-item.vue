@@ -18,7 +18,7 @@
         default: false
       },
       name: {
-        type: [String,Number],
+        type: [String, Number],
         required: true
       }
     },
@@ -36,18 +36,20 @@
     },
     methods: {
       xxx() {
-        this.eventBus.$emit('update:selected', this.name)
+        this.eventBus.$emit('update:selected', this.name, this)
       }
     }
   }
 </script>
 <style lang="scss" scoped>
+  $blue: blue;
   .tabs-item {
     display: flex;
     padding: 0 1em;
     align-items: center;
-    &.active{
-      background: #ff1100;
+    color: $blue;
+    height: 100%;
+    &.active {
     }
   }
 </style>
