@@ -25,7 +25,9 @@ export default {
 <style lang="scss" scoped>
   $tab-height: 40px;
   $blue: blue;
+  $border-color: #ddd;
 .tabs-head{
+  border-bottom: 1px solid $border-color;
   display: flex;
   height: $tab-height;
   justify-content: flex-start;
@@ -38,6 +40,10 @@ export default {
   }
   > .actions-wrapper{
     margin-left: auto;
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>
