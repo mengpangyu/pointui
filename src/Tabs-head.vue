@@ -38,10 +38,19 @@ export default {
   }
   > .actions-wrapper{
     margin-left: auto;
-    padding: 0 1em;
     display: flex;
     justify-content: center;
     align-items: center;
+    > button{
+      padding: .5em 1em;
+      border: none;
+      outline: none;
+      background: #ffffff;
+      &:hover{
+        color: $blue;
+        font-weight: bold;
+      }
+    }
   }
 }
 </style>

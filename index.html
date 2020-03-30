@@ -45,34 +45,13 @@
   </style>
 </head>
 <body>
-<div id="app">
-  <p-tabs :selected.sync="selectedTab">
-    <p-tabs-head>
-      <template slot="actions">
-         <button>设置</button>
-      </template>
-      <p-tabs-item name="woman">
-        <p-icon name="setting"></p-icon>美女
-      </p-tabs-item>
-      <p-tabs-item name="finance" disabled>
-       财经
-      </p-tabs-item>
-      <p-tabs-item name="sports">
-       体育
-      </p-tabs-item>
-    </p-tabs-head>
-    <p-tabs-body>
-      <p-tabs-pone name="woman">
-       美女咨询
-      </p-tabs-pone>
-      <p-tabs-pone name="finance">
-       财经相关
-      </p-tabs-pone>
-      <p-tabs-pone name="sports">
-       体育相关
-      </p-tabs-pone>
-    </p-tabs-body>
-  </p-tabs>
+<div id="app" style="margin:100px">
+  <p-popover>
+    <template slot="content">
+     <div>我是按钮的弹出消息</div>
+    </template>
+      <button>点我</button>
+  </p-popover>
 </div>
 <script src="src/app.js"></script>
 </body>
