@@ -16,6 +16,30 @@
         visible: false
       }
     },
+    mounted(){
+      if (this.trigger === 'click') {
+        this.$refs.popover.addEventListener('click',this.onClick)
+      }else{
+        this.$refs.popover.addEventListener('mouseenter',this.open)
+        this.$refs.popover.addEventListener('mouseleave',this.close)
+      }
+    },
+    computed:{
+      openEvent(){
+        if (this.trigger === 'click') {
+          return 'click'
+        }else{
+          return 'mouseenter'
+        }
+      },
+      closeEvent(){
+        if (this.trigger === 'click') {
+          return 'click'
+        }else{
+          return 'mouseleave'
+        }
+      }
+    },
     props: {
       position: {
         type: String,
@@ -23,6 +47,13 @@
         validator(value) {
           return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
 
+        }
+      },
+      trigger:{
+        type:String,
+        default: 'click',
+        validator(value){
+          return ['click','hover'].indexOf(value) >= 0
         }
       }
     },
@@ -62,6 +93,7 @@
         this.visible = true
         this.$nextTick(() => {
           this.positionContent()
+          console.log('关闭')
           document.addEventListener('click', this.onClickDocument)
         })
       },
@@ -73,7 +105,9 @@
         if (this.$refs.triggerWrapper.contains(event.target)) {
           if (this.visible === true) {
             this.close()
+            // console.log('关闭')
           } else {
+            console.log('开启')
             this.open()
           }
         }
@@ -93,7 +127,7 @@
     position: absolute;
     border: 1px solid $border-color;
     border-radius: 4px;
-    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));background: #ffffff;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));background: #ffffff;
     padding: .5em 1em;
     max-width: 20em;
     word-break: break-all;
