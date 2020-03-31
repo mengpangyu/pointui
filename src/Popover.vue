@@ -1,7 +1,7 @@
 <template>
   <div class="popover" ref="popover" >
     <div :class="{[`position-${position}`]:true} " ref="contentWrapper" class="content-wrapper" v-if="visible">
-      <slot name="content"></slot>
+      <slot name="content" :close="close"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
       <slot></slot>

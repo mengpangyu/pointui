@@ -50,8 +50,8 @@
 <div id="app" style="margin:100px">
   <div style="padding:50px">
     <p-popover position="left">
-      <template slot="content">
-        <div>我我是按钮的弹出消息</div>
+      <template slot="content" slot-scope="{close}">
+        <div>我我是按钮的弹出消息<p-button @click="close">关闭</p-button></div>
       </template>
       <p-button @click="yyy">下面</p-button>
     </p-popover>
