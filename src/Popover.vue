@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" ref="popover" @click="onClick">
+  <div class="popover" ref="popover" >
     <div :class="{[`position-${position}`]:true} " ref="contentWrapper" class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
@@ -22,6 +22,14 @@
       }else{
         this.$refs.popover.addEventListener('mouseenter',this.open)
         this.$refs.popover.addEventListener('mouseleave',this.close)
+      }
+    },
+    destroyed() {
+      if (this.trigger === 'click') {
+        this.$refs.popover.removeEventListener('click',this.onClick)
+      }else{
+        this.$refs.popover.removeEventListener('mouseenter',this.open)
+        this.$refs.popover.removeEventListener('mouseleave',this.close)
       }
     },
     computed:{
@@ -93,7 +101,6 @@
         this.visible = true
         this.$nextTick(() => {
           this.positionContent()
-          console.log('关闭')
           document.addEventListener('click', this.onClickDocument)
         })
       },
@@ -105,9 +112,7 @@
         if (this.$refs.triggerWrapper.contains(event.target)) {
           if (this.visible === true) {
             this.close()
-            // console.log('关闭')
           } else {
-            console.log('开启')
             this.open()
           }
         }
