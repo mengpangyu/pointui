@@ -1,6 +1,6 @@
 <template>
   <div class="popover" ref="popover" @click="onClick">
-    <div ref="contentWrapper" class="content-wrapper" v-if="visible">
+    <div :class="{[`position-${position}`]:true} " ref="contentWrapper" class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
     <span ref="triggerWrapper" style="display: inline-block;">
@@ -16,12 +16,42 @@
         visible: false
       }
     },
+    props: {
+      position: {
+        type: String,
+        default: 'top',
+        validator(value) {
+          return ['top', 'bottom', 'left', 'right'].indexOf(value) >= 0
+
+        }
+      }
+    },
     methods: {
       positionContent() {
-        document.body.appendChild(this.$refs.contentWrapper)
-        let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
-        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
-        this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
+        const {contentWrapper, triggerWrapper} = this.$refs
+        document.body.appendChild(contentWrapper)
+        const {width, height, top, left} = triggerWrapper.getBoundingClientRect()
+        const {height: height2} = contentWrapper.getBoundingClientRect()
+        let positions = {
+          top: {
+            top: top + window.scrollY,
+            left: left + window.scrollX
+          },
+          bottom: {
+            top: top + height + window.scrollY,
+            left: left + window.scrollX
+          },
+          left: {
+            top: top + (height - height2) / 2 + window.scrollY,
+            left: left + window.scrollX
+          },
+          right: {
+            top: top + (height - height2) / 2 + window.scrollY,
+            left: left + window.scrollX + width
+          },
+        }
+        contentWrapper.style.left = positions[this.position].left + 'px'
+        contentWrapper.style.top = positions[this.position].top + 'px'
       },
       onClickDocument(e) {
         if (this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {return }
@@ -63,31 +93,60 @@
     position: absolute;
     border: 1px solid $border-color;
     border-radius: 4px;
-    transform: translateY(-100%);
     filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));background: #ffffff;
-    margin-top: -10px;
     padding: .5em 1em;
     max-width: 20em;
     word-break: break-all;
 
-    &::before, &::after {
-      content: '';
-      display: block;
-      border: 10px solid transparent;
-      width: 0;
-      height: 0;
-      position: absolute;
-      left: 10px;
+    &::before, &::after { content: ''; display: block; border: 10px solid transparent; width: 0; height: 0;
+      position: absolute; }
+
+    &.position-top {
+      transform: translateY(-100%);
+      margin-top: -10px;
+
+      &::before, &::after { left: 10px; }
+
+      &::before { border-top-color: $border-color; top: 100%; }
+
+      &::after { border-top-color: white; top: calc(100% - 1px); }
     }
 
-    &::before {
-      border-top-color: $border-color;
-      top: 100%;
+    &.position-bottom {
+      margin-top: 10px;
+
+      &::before, &::after { left: 10px;}
+
+      &::before { border-bottom-color: $border-color; bottom: 100%; }
+
+      &::after { border-bottom-color: white; bottom: calc(100% - 1px); }
     }
 
-    &::after {
-      border-top-color: white;
-      top: calc(100% - 1px);
+    &.position-left {
+      transform: translateX(-100%);
+      margin-left: -10px;
+
+      &::before, &::after {
+        transform: translateY(-50%);
+        top: 50%;
+      }
+
+      &::before { left: 100%;border-left-color: $border-color; }
+
+      &::after { left: calc(100% - 1px);border-left-color: white; }
+    }
+
+    &.position-right {
+      margin-left: 10px;
+
+      &::before, &::after {
+        transform: translateY(-50%);
+        top: 50%;
+      }
+
+      &::before { right: 100%;border-right-color: $border-color; }
+
+      &::after { right: calc(100% - 1px);border-right-color: white; }
     }
   }
 </style>
