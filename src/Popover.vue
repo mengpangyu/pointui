@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click="onClick">
+  <div class="popover" ref="popover" @click="onClick">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
@@ -17,29 +17,35 @@
       }
     },
     methods: {
+      positionContent() {
+        document.body.appendChild(this.$refs.contentWrapper)
+        let {width, height, top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
+        this.$refs.contentWrapper.style.left = left + window.scrollX + 'px'
+        this.$refs.contentWrapper.style.top = top + window.scrollY + 'px'
+      },
+      onClickDocument(e){
+        console.log(this.$refs.popover)
+        console.log(e.target)
+        if (this.$refs.popover && (this.$refs.popover === e.target || this.$refs.popover.contains(e.target))) {return }
+        this.close()
+      },
+      open() {
+        this.visible = true
+        this.$nextTick(() => {
+          this.positionContent()
+          document.addEventListener('click', this.onClickDocument)
+        })
+      },
+      close(){
+        this.visible = false
+        document.removeEventListener('click', this.onClickDocument)
+      },
       onClick(event) {
-        console.log(event.target)
         if (this.$refs.triggerWrapper.contains(event.target)) {
-          this.visible = !this.visible
-          console.log(this.visible)
           if (this.visible === true) {
-            setTimeout(() => {
-              document.body.appendChild(this.$refs.contentWrapper)
-              let {top, left} = this.$refs.triggerWrapper.getBoundingClientRect()
-              this.$refs.contentWrapper.style.left = `${left + window.scrollX}px`
-              this.$refs.contentWrapper.style.top = `${top + window.scrollY}px`
-              let eventHandler = (e) => {
-                console.log(e.target)
-                console.log(this.$refs.contentWrapper)
-                if(!this.$refs.contentWrapper.contains(e.target)){
-                  this.visible = false
-                  document.removeEventListener('click', eventHandler)
-                }
-              }
-              document.addEventListener('click', eventHandler)
-            })
+            this.close()
           }else{
-            console.log('dd')
+            this.open()
           }
         }
       }

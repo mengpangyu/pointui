@@ -29,15 +29,17 @@
     }
   </style>
   <style>
-    .header{
+    .header {
       background: #333333;
       height: 100px;
     }
-    .footer{
+
+    .footer {
       background: #aaa;
       height: 100px;
     }
-    .sider{
+
+    .sider {
       width: 200px;
       background: #ff1100;
     }
@@ -46,12 +48,14 @@
 </head>
 <body>
 <div id="app" style="margin:100px">
-  <p-popover>
-    <template slot="content">
-     <div>我是按钮的弹出消息</div>
-    </template>
-      <button>点我</button>
-  </p-popover>
+  <div>
+    <p-popover >
+      <template slot="content">
+        <div>我是按钮的弹出消息</div>
+      </template>
+      <button @click="yyy">点我</button>
+    </p-popover>
+  </div>
 </div>
 <script src="src/app.js"></script>
 </body>

@@ -45,5 +45,10 @@ new Vue({
       selectedTab: 'sports'
     }
   },
+  methods:{
+    yyy(){
+      console.log('dd')
+    }
+  }
 })
 
