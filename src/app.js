@@ -36,7 +36,7 @@ Vue.component('p-toast', Toast)
 Vue.component('p-tabs', Tabs)
 Vue.component('p-tabs-head', TabsHead)
 Vue.component('p-tabs-body', TabsBody)
-Vue.component('p-tabs-pone', TabsPane)
+Vue.component('p-tabs-pane', TabsPane)
 Vue.component('p-tabs-item', TabsItem)
 Vue.component('p-popover', Popover)
 Vue.component('p-popover', Popover)
@@ -47,8 +47,13 @@ new Vue({
   el: '#app',
   data(){
     return {
-      selectedTab: ['2']
+      selectedTab: 'tab1'
     }
   },
+  methods:{
+    createToast(){
+      this.$toast('dddd')
+    }
+  }
 })
 

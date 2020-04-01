@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper" :class="{error}">
     <input type="text" :value="value" :disabled="disabled" :readonly="readonly"
-    @change="$emit('change',$event.target.value)"
+           @change="$emit('change',$event.target.value)"
            @blur="$emit('blur',$event.target.value)"
            @focus="$emit('focus',$event.target.value)"
            @input="$emit('input',$event.target.value)"
@@ -14,8 +14,9 @@
 </template>
 <script>
   import Icon from './Icon'
+
   export default {
-    components:{Icon},
+    components: {Icon},
     name: 'PointInput',
     props: {
       value: {
@@ -25,12 +26,12 @@
         type: Boolean,
         default: false
       },
-      readonly:{
+      readonly: {
         type: Boolean,
         default: false
       },
-      error:{
-        type:String,
+      error: {
+        type: String,
       }
     }
   }
@@ -45,29 +46,37 @@
   $red: #f10;
   .wrapper { font-size: $font-size; display: inline-flex;
     align-items: center;
-    > *{
+
+    > * {
       margin-right: .5em;
-      &:last-child{
+
+      &:last-child {
         margin-right: 0;
       }
     }
 
     > input { padding: 0 10px; height: $height; border: 1px solid $border-color; border-radius: $border-radius; font-size: inherit;
-&:hover { border-color: $border-color-hover; }
 
-      &:focus { box-shadow: inset 0 1px 3px $box-shadow-color; outline: none; }
-      &:disabled{ border-color: #bbb; color: #bbb; cursor: not-allowed; background: #ffffff; }
-      &:read-only{ border-color: #bbb; color: #bbb; cursor: not-allowed; }
+      &:hover { border-color: $border-color-hover; }
+
+      &:focus { box-shadow: inset 0 0px 1px $box-shadow-color; outline: none; }
+
+      &:disabled { border-color: #bbb; color: #bbb; cursor: not-allowed; background: #ffffff; }
+
+      &:read-only { border-color: #bbb; color: #bbb; cursor: not-allowed; }
     }
-    &.error{
-      >input{
+
+    &.error {
+      > input {
         border-color: $red;
       }
     }
-    .icon-error{
+
+    .icon-error {
       fill: $red;
     }
-    .error-message{
+
+    .error-message {
       color: $red;
     }
   }

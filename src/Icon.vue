@@ -16,5 +16,6 @@
 .p-icon{
   width: 1em;
   height: 1em;
+  color: inherit;
 }
 </style>

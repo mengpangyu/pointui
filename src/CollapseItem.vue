@@ -67,7 +67,8 @@
     }
   }
   .content{
-    padding: 0 1em;
+    padding: .5em 1em;
+    background: #DEDEDE;
   }
 
 }

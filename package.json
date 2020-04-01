@@ -43,6 +43,7 @@
     "parcel-bundler": "^1.12.4",
     "puppeteer": "^2.1.1",
     "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
     "sinon": "^9.0.1",
     "sinon-chai": "^3.5.0",
     "typescript": "^3.8.3",
