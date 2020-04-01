@@ -34,6 +34,14 @@
   }
 </script>
 <style lang="scss" scoped>
+  $font-size: 14px;
+  $button-height: 32px;
+  $button-bg: #fff;
+  $button-active-bg: #fff;
+  $border-radius: 4px;
+  $color: #333;
+  $border-color: #999;
+  $border-color-hover: #666;
   @keyframes loadingCircle {
     0% {
       transform: rotate(0);
@@ -44,15 +52,16 @@
   }
 
   .g-button {
-    font-size: var(--font-size); height: var(--button-height); padding: 0 1em; border-radius: var(--border-radius); border: 1px solid var(--border-color); background: var(--botton-bg); display: inline-flex; justify-content: center; align-items: center;
+    font-size: $font-size; height: $button-height; padding: 0 1em; border-radius: $border-radius; border: 1px solid $border-color; background: $botton-bg; display: inline-flex; justify-content: center; align-items: center;
+
     vertical-align: middle;
 
     &:hover {
-      border-color: var(--border-color-hover);
+      border-color: $border-color-hover;
     }
 
     &:active {
-      background: var(--button-active-bg);
+      background: $button-active-bg;
     }
 
     &:focus { outline: none; }
