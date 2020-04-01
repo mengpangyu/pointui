@@ -18,6 +18,8 @@ import TabsBody from "./Tabs-body"
 import TabsItem from "./Tabs-item"
 import TabsPane from "./Tabs-pane"
 import Popover from "./Popover"
+import Collapse from "./Collapse"
+import CollapseItem from "./CollapseItem"
 
 Vue.component('p-button', Button)
 Vue.component('p-icon', Icon)
@@ -37,6 +39,9 @@ Vue.component('p-tabs-body', TabsBody)
 Vue.component('p-tabs-pone', TabsPane)
 Vue.component('p-tabs-item', TabsItem)
 Vue.component('p-popover', Popover)
+Vue.component('p-popover', Popover)
+Vue.component('p-collapse', Collapse)
+Vue.component('p-collapse-item', CollapseItem)
 Vue.use(Plugin)
 new Vue({
   el: '#app',
@@ -45,9 +50,5 @@ new Vue({
       selectedTab: 'sports'
     }
   },
-  methods:{
-    yyy(){
-    }
-  }
 })
 

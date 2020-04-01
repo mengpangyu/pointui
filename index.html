@@ -48,58 +48,11 @@
 </head>
 <body>
 <div id="app" style="margin:100px">
-  <div style="padding:50px">
-    <p-popover position="left">
-      <template slot="content" slot-scope="{close}">
-        <div>我我是按钮的弹出消息<p-button @click="close">关闭</p-button></div>
-      </template>
-      <p-button @click="yyy">下面</p-button>
-    </p-popover>
-    <p-popover position="bottom">
-      <template slot="content">
-        <div>我我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息是按钮的弹出消息</div>
-      </template>
-      <p-button @click="yyy">下面</p-button>
-    </p-popover>
-    <p-popover position="top">
-      <template slot="content">
-        <div>我我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息是按钮的弹出消息</div>
-      </template>
-      <p-button @click="yyy">上面</p-button>
-    </p-popover>
-    <p-popover position="right">
-      <template slot="content">
-        <div>我我是按钮的弹出消息我是按钮的弹</div>
-      </template>
-      <p-button @click="yyy">上面</p-button>
-    </p-popover>
-  </div>
-  <div>
-    <p-popover position="left" trigger="hover">
-      <template slot="content">
-        <div>我我是按钮的弹出消息</div>
-      </template>
-      <p-button @click="yyy">下面</p-button>
-    </p-popover>
-    <p-popover position="bottom"trigger="hover">
-      <template slot="content">
-        <div>我我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息是按钮的弹出消息</div>
-      </template>
-      <p-button @click="yyy">下面</p-button>
-    </p-popover>
-    <p-popover position="top"trigger="hover">
-      <template slot="content">
-        <div>我我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息我是按钮的弹出消息是按钮的弹出消息</div>
-      </template>
-      <p-button @click="yyy">上面</p-button>
-    </p-popover>
-    <p-popover position="right"trigger="hover">
-      <template slot="content">
-        <div>我我是按钮的弹出消息我是按钮的弹</div>
-      </template>
-      <p-button @click="yyy">上面</p-button>
-    </p-popover>
-  </div>
+  <p-collapse>
+    <p-collapse-item title="标题1">内容1</p-collapse-item>
+    <p-collapse-item title="标题2">内容2</p-collapse-item>
+    <p-collapse-item title="标题3">内容3</p-collapse-item>
+  </p-collapse>
 </div>
 <script src="src/app.js"></script>
 </body>
