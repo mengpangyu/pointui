@@ -14,11 +14,12 @@
         default: false
       },
       selected: {
-        type: String
+        type:Array
       }
     },
     data() {
-      return {eventBus: new Vue}
+      return {eventBus: new Vue,
+      }
     },
     provide() {
       return {
@@ -27,9 +28,23 @@
     },
     mounted() {
       this.eventBus.$emit('update:selected',this.selected)
-      this.eventBus.$on('update:selected',(name)=>[
-        this.$emit('update:selected',name)
-      ])
+      this.eventBus.$on('update:addSelected',(name)=>{
+        let selectCopy = JSON.parse(JSON.stringify(this.selected))
+        if(this.single){
+          selectCopy = [name]
+        }else{
+          selectCopy.push(name)
+        }
+        this.eventBus.$emit('update:selected',selectCopy)
+        this.$emit('update:selected',selectCopy)
+      })
+      this.eventBus.$on('update:removeSelected',(name)=>{
+        let selectCopy = JSON.parse(JSON.stringify(this.selected))
+        let index = selectCopy.indexOf(name)
+        selectCopy.splice(index,1)
+        this.eventBus.$emit('update:selected',selectCopy)
+        this.$emit('update:selected',selectCopy)
+      })
     }
   }
 </script>
