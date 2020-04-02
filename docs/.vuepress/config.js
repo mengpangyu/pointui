@@ -1,4 +1,5 @@
 module.exports = {
+  base: '/pointui/',
   title: 'Point UI',
   description: '一个基于Vue的UI库',
   themeConfig: {
@@ -18,10 +19,10 @@ module.exports = {
           collapsable: false,
           children: [
             ['button.md', 'Button'],
-              ['input.md', 'Input'],
-              ['layout.md', 'Layout'],
-              ['popover.md', 'Popover'],
-              ['tab.md', 'Tab'],
+            ['input.md', 'Input'],
+            ['layout.md', 'Layout'],
+            ['popover.md', 'Popover'],
+            ['tab.md', 'Tab'],
             ['toast.md', 'Toast'],
             ['responsive.md', 'Grid'],
             ['collapse.md', 'Collapse'],
