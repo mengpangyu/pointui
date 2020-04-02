@@ -1,7 +1,7 @@
 {
   "name": "pointui",
-  "version": "0.0.5",
-  "description": "this is a UI storeroom",
+  "version": "1.0.2",
+  "description": "基于 VUe 的 UI 框架",
   "main": "dist/index.js",
   "scripts": {
     "start": "npx parcel index.html --no-cache",
