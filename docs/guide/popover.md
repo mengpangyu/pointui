@@ -77,7 +77,7 @@
 ```
 ### 参数介绍
 
-|  |  position | trigger | 
+|  |  position(可选) | trigger(可选) | 
 |---|  ----  |  --- | 
 |功能| 设置显示位置 | 设置事件 |
 |类型| right/left/top/bottom | click/hover | 

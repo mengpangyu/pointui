@@ -12,7 +12,7 @@
 >上中下布局
 
 
-![avatar](../image/layout1.png)
+![avatar](../.vuepress/public/layout1.png)
 
 ```vue
 <p-layout>
@@ -26,7 +26,7 @@
 
 
 
-![avatar](../image/layout2.png)
+![avatar](../.vuepress/public/layout2.png)
 
 ```vue
 <p-layout>
@@ -44,7 +44,7 @@
 
 
 
-![avatar](../image/layout3.png)
+![avatar](../.vuepress/public/layout3.png)
 
 ```vue
 <p-layout>
@@ -62,7 +62,7 @@
 
 
 
-![avatar](../image/layout4.png)
+![avatar](../.vuepress/public/layout4.png)
 
 ```vue
 <p-layout>

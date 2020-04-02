@@ -56,7 +56,7 @@
 ```
 ### 参数介绍
 
-|  |  icon | icon-position | loading |
+|  |  icon(可选) | icon-position(可选) | loading(可选) |
 |---|  ----  |  --- | --- | --- |
 |功能| 设置含有的icon | 设置icon位置 | 加载中的按钮 | 
 |类型| String | left/right |  Boolean |

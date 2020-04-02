@@ -54,7 +54,7 @@
 
 ### 参数介绍
 
-|  |  value | disabled | readonly | error |
+|  |  value(可选) | disabled(可选)  | readonly(可选) | error(可选)  |
 |---|  ----  |  --- | --- | --- |
 |功能| 设置输入框里的默认内容 | 禁止输入| 只读 | 错误信息 |
 |类型| String | disabled| readonly | String |

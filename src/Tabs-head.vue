@@ -13,12 +13,9 @@ export default {
   inject: ['eventBus'],
   mounted(){
     this.eventBus.$on('update:selected',(item,vm)=>{
-      console.log(vm.$el)
       let {width,left} = vm.$el.getBoundingClientRect()
       let headerLeft = this.$refs.head.getBoundingClientRect().left
-      console.log(width)
       this.$refs.line.style.width = `${width}px`
-      console.log(left)
       this.$refs.line.style.left= `${left-headerLeft}px`
     })
   }

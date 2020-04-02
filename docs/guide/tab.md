@@ -96,7 +96,7 @@
 
 ### 参数介绍
 
-|  |  selected | name | 
+|  |  selected(必选) | name(必选) | 
 |---|  ----  |  --- | 
 |功能| 与name组合使用,默认选中某个tab,必须为动态数据| 给tab-item取名,与selected组合使用 |
 |类型| String | String| 

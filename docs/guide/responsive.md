@@ -30,7 +30,7 @@
 |功能| 控制间隙  | 控制Col位置 |
 |类型| Number | left,right,center| 
 #### Col 组件
-|  |  span | offset(可选) | ipad(可选) | narrow-pc(可选) |pc(可选)| wide-pc(可选) |
+|  |  span(必选) | offset(可选) | ipad(可选) | narrow-pc(可选) |pc(可选)| wide-pc(可选) |
 |---|  ----  | ----  |----|----|----|-----|
 |功能| 控制Col的占比  | 控制前后的格子需要 | 适应ipad |适应窄 PC| 适应 PC |适应宽PC|
 |类型| Number | Number | Object |Object| Object| Object|

@@ -7,6 +7,6 @@
 
 
 ```javascript
-import pointui from 'pointui'
+import {Button} from 'pointui'
 import 'pointui/dist/main.css'
 ```
