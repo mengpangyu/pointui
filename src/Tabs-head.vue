@@ -1,7 +1,7 @@
 <template>
-  <div class="tabs-head">
+  <div class="tabs-head" ref="head">
     <slot></slot>
-<!--    <div class="line" ref="line"></div>-->
+    <div class="line" ref="line"></div>
     <div class="actions-wrapper">
       <slot name="actions"></slot>
     </div>
@@ -13,19 +13,20 @@ export default {
   inject: ['eventBus'],
   mounted(){
     this.eventBus.$on('update:selected',(item,vm)=>{
-      // console.log(vm.$el)
-      // let {width,left} = vm.$el.getBoundingClientRect()
-      // console.log(width)
-      // this.$refs.line.style.width = `${width}px`
-      // console.log(left)
-      // this.$refs.line.style.left= `${left}px`
+      console.log(vm.$el)
+      let {width,left} = vm.$el.getBoundingClientRect()
+      let headerLeft = this.$refs.head.getBoundingClientRect().left
+      console.log(width)
+      this.$refs.line.style.width = `${width}px`
+      console.log(left)
+      this.$refs.line.style.left= `${left-headerLeft}px`
     })
   }
 }
 </script>
 <style lang="scss" scoped>
   $tab-height: 40px;
-  $blue: blue;
+  $blue: #3EAF7C;
   $border-color: #ddd;
 .tabs-head{
   border-bottom: 1px solid $border-color;

@@ -3,7 +3,7 @@ home: true
 heroText: Point UI
 tagline: 一款好用的 UI 框架
 actionText: 快速上手 →
-actionLink: /guide/
+actionLink: /guide/install.md
 features:
 - title: 基于 Vue 
   details: 方便 Vue 用户更好的使用样式

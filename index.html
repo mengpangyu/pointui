@@ -29,58 +29,10 @@
     }
   </style>
   <style>
-    .header {
-      background: #79E0B2;
-      height: 50px;
-      line-height: 50px;
-    }
-
-    .footer {
-      background: #79E0B2;
-      height: 50px;
-      line-height: 50px;
-
-    }
-
-    .sider {
-      width: 200px;
-      background: #ff1100;
-    }
-    *{
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-    }
-    .row{
-      color: #ffffff;}
-    .col{
-      min-height: 30px;
-      border: 1px solid #ffffff;
-      display: flex;
-      background: #ffffff;
-      align-items: center;justify-content: center;
-    }
-
   </style>
 </head>
 <body>
 <div id="app" >
-  <p-tabs :selected.sync="selectedTab">
-    <p-tabs-head>
-      <template slot="actions">
-        <button>设置</button>
-      </template>
-      <p-tabs-item name="tab1">Tab1</p-tabs-item>
-      <p-tabs-item name="tab2">Tab2</p-tabs-item>
-      <p-tabs-item name="tab3">Tab3</p-tabs-item>
-    </p-tabs-head>
-    <p-tabs-body>
-      <p-tabs-pane name="tab1">Tab1内容</p-tabs-pane>
-      <p-tabs-pane name="tab2">Tab2内容</p-tabs-pane>
-      <p-tabs-pane name="tab3">Tab3内容</p-tabs-pane>
-    </p-tabs-body>
-  </p-tabs>
-  <p-button disabled>按钮</p-button>
 </div>
 <script src="src/app.js"></script>
 </body>

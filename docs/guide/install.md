@@ -1,6 +1,4 @@
----
-title: 开始
----
+# 安装
 
 ## 引入 Point UI
 Point UI 致力于提供给程序员更加简洁的开发体验
@@ -12,14 +10,3 @@ npm install pointui
 OR 
 yarn global add pointui
 ``` 
-
-## 快速入门
-
-
-首先在你项目里载入 Point UI
-
-
-```javascript
-import pointui from 'pointui'
-import 'pointui/dist/main.css'
-```

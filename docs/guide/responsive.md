@@ -5,10 +5,12 @@
 ### 代码演示
 
 
+<ClientOnly>
 <responsive-demos></responsive-demos>
+</ClientOnly>
 
 
-```javascript
+```vue
 <p-row gutter="20">
    <p-col span="12" >...</p-col>
    <p-col span="12">...</p-col>

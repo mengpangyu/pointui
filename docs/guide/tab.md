@@ -12,10 +12,12 @@
 >默认 tab
 
 
+<ClientOnly>
 <tabs-demos></tabs-demos>
+</ClientOnly>
 
-```javascript
-<p-tabs :selected.sync="selectedTab">
+```vue
+<p-tabs :selected.sync="tab1">
   <p-tabs-head>
     <template slot="actions">
       <button>设置</button>
@@ -34,10 +36,12 @@
 
 >添加 icon 的 tab
 
+<ClientOnly>
 <tabs-demos2></tabs-demos2>
+</ClientOnly>
 
-```javascript
-<p-tabs :selected.sync="selectedTab">
+```vue
+<p-tabs :selected.sync="tab1">
   <p-tabs-head>
     <template slot="actions">
       <button>设置</button>
@@ -62,10 +66,12 @@
 
 >添加 禁用 的 tab
 
+<ClientOnly>
 <tabs-demos3></tabs-demos3>
+</ClientOnly>
 
-```javascript
-<p-tabs :selected.sync="selectedTab">
+```vue
+<p-tabs :selected.sync="tab1">
   <p-tabs-head>
     <template slot="actions">
       <button>设置</button>
@@ -87,3 +93,10 @@
   </p-tabs-body>
 </p-tabs>
 ```
+
+### 参数介绍
+
+|  |  selected | name | 
+|---|  ----  |  --- | 
+|功能| 与name组合使用,默认选中某个tab,必须为动态数据| 给tab-item取名,与selected组合使用 |
+|类型| String | String| 

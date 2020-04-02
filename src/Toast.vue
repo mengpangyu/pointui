@@ -105,20 +105,21 @@
     transform: translateX(-50%);
 
     &.position-top { top: 5px;
-
+      z-index: 30;
       > .toast {
         animation: slide-down .5s;
       }
     }
 
     &.position-bottom { bottom: 5px;
-
+      z-index: 30;
       > .toast {
         animation: slide-up .5s;
       }
     }
 
     &.position-middle { top: 50%;transform: translate(-50%, -50%);
+      z-index: 30;
       > .toast {
         animation: fade-in .5s;
       }

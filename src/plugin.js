@@ -14,7 +14,7 @@ let currentToast
 export default {
   install(Vue, options) {
     Vue.prototype.$toast = function (message,toastOptions) {
-      if(currentToast){currentToast.close()}
+      if(currentToast){currentToast.closeMe()}
       currentToast = createToast({Vue,message,propsData:toastOptions,onClose:()=>{
         currentToast = null
         }})

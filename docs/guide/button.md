@@ -14,32 +14,49 @@
 >默认按钮
 
 
+<ClientOnly>
 <button-demos></button-demos>
+</ClientOnly>
 
-```javascript
+```vue
 <p-button>按钮</p-button>
 ```
 
 >带icon的按钮
 
+<ClientOnly>
 <button-demos2></button-demos2>
-```javascript
+</ClientOnly>
+
+```vue
 <p-button icon="setting">按钮</p-button>
 <p-button icon="setting" icon-position="right">按钮</p-button>
 ```
 
 >正在加载的按钮
 
+<ClientOnly>
 <button-demos4></button-demos4>
-```javascript
+</ClientOnly>
+
+```vue
 <p-button loading="true">按钮</p-button>
 ```
 >联合按钮
 
+<ClientOnly>
 <button-demos5></button-demos5>
-```javascript
+</ClientOnly>
+
+```vue
 <p-button-group>
    <p-button  icon="left">按钮</p-button>
    <p-button  icon="right">按钮</p-button>
 </p-button-group>
 ```
+### 参数介绍
+
+|  |  icon | icon-position | loading |
+|---|  ----  |  --- | --- | --- |
+|功能| 设置含有的icon | 设置icon位置 | 加载中的按钮 | 
+|类型| String | left/right |  Boolean |

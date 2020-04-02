@@ -14,7 +14,7 @@
 
 ![avatar](../image/layout1.png)
 
-```javascript
+```vue
 <p-layout>
   <p-header>header</p-header>
   <p-content>content</p-content>
@@ -28,7 +28,7 @@
 
 ![avatar](../image/layout2.png)
 
-```javascript
+```vue
 <p-layout>
   <p-header>header</p-header>
       <p-layout>
@@ -46,7 +46,7 @@
 
 ![avatar](../image/layout3.png)
 
-```javascript
+```vue
 <p-layout>
   <p-header>header</p-header>
       <p-layout>
@@ -64,7 +64,7 @@
 
 ![avatar](../image/layout4.png)
 
-```javascript
+```vue
 <p-layout>
   <p-sider>sider</p-sider>
       <p-layout>

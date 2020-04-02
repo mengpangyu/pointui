@@ -12,32 +12,49 @@
 >默认输入框
 
 
+<ClientOnly>
 <input-demos></input-demos>
+</ClientOnly>
 
-```javascript
+```vue
 <p-input value="输入内容"></p-input>
 ```
 
 >不可输入
 
+<ClientOnly>
 <input-demos2></input-demos2>
-```javascript
+</ClientOnly>
+
+```vue
 <p-input disabled value="不可输入"></p-input>
 ```
 
 
 >只读
 
+<ClientOnly>
 <input-demos3></input-demos3>
-```javascript
+</ClientOnly>
+
+```vue
 <p-input readonly value="只读"></p-input>
 ```
 
 >错误输入
 
+<ClientOnly>
 <input-demos4></input-demos4>
-```javascript
+</ClientOnly>
+
+```vue
 <p-input value="错误内容" error="你输入的内容不符合要求"></p-input>
 ```
 
 
+### 参数介绍
+
+|  |  value | disabled | readonly | error |
+|---|  ----  |  --- | --- | --- |
+|功能| 设置输入框里的默认内容 | 禁止输入| 只读 | 错误信息 |
+|类型| String | disabled| readonly | String |
