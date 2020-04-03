@@ -5,7 +5,7 @@
 ## 作者: Chauncey
 
 ## 介绍
-这是我在学习 Vue 的时候做的 UI 框架
+这是我在基于 Vue 做的 UI 框架
 ## 开始使用
 
 ## 安装
@@ -15,14 +15,14 @@
 请在使用之前开启 border-box
 在安装app.js设置样式
 ```css
-    *{ padding: 0; margin: 0; box-sizing: border-box; }
+*{ padding: 0; margin: 0; box-sizing: border-box; }
 ```
 需要设置默认颜色和变量
 
 2. 安装 pointui
  
 ```shell script
-npm i --save pointui
+npm install --save pointui
 ```
 
 3. 引入
@@ -41,11 +41,16 @@ export default {
 
 ## 文档
 
+[官方文档](https://chaunceym.github.io/pointui/)
 
 ## 提问
 
 ## 变更记录
 
+请查看 git commit 记录
+
 ## 联系方式
 
-## 
+邮箱: 18322276773@163.com
+
+
