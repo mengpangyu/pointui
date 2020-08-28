@@ -1,6 +1,6 @@
 # PointUI -  一款基于 Vue 的 UI 库
 
-[![Build Status](https://travis-ci.org/mxylovezh/pointui.svg?branch=master)](https://travis-ci.org/mxylovezh/pointui)
+[![Build Status](https://travis-ci.org/chaunceym/pointui.svg?branch=master)](https://travis-ci.org/chaunceym/pointui)
 
 ## 作者: Chauncey
 
